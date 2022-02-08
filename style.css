@@ -1,66 +1,120 @@
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
-body{
-    background-color: #ECDCDC;
 
+body {
+    background-color: #ECDCDC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 input {
-  border: 0;
-  outline: 0;
+    border: 0;
+    outline: 0;
 }
+
 input:focus {
-  outline: none !important;
+    outline: none !important;
 }
 
 .header {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  align-items: center;
-  margin-top: 20px;
-  position: relative;
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
 }
+
 .header img {
-  width: 150px;
-  margin-left: -150px;
+    width: 150px;
+    margin-left: -150px;
 }
 
 .header p {
-  font-size: 30px;
-  position: absolute;
-  top: 35px;
-  left: 190px;
-  font-weight: bold;
+    font-size: 30px;
+    position: absolute;
+    top: 35px;
+    left: 190px;
+    font-weight: bold;
 }
-.news, .dictionary {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  align-items: center;
-  margin-top: 20px;
-  flex-direction: column;
+
+.news,
+.dictionary {
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-direction: column;
 }
+
 .search-bar {
-    width:75%;
+    width: 75%;
     padding: 10px;
-    display: flex; 
+    display: flex;
     justify-content: space-between;
     background-color: #C4C4C4;
     border-radius: 15px;
     align-items: center;
-    
 }
 
-.news h2, .dictionary h2{
+.news h2,
+.dictionary h2 {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.search{
-    width:80%;
-    height:20px;
-    background-color:inherit;
-    color:rgb(0, 0, 0);
+
+.search {
+    width: 80%;
+    height: 20px;
+    background-color: inherit;
+    color: rgb(0, 0, 0);
+}
+
+.dictionary-container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+}
+
+.inner-container {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.dict-label {
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+#word {
+    font-size: 16px
+}
+
+.audio-controls {
+    width: 150px;
+    height: 30px;
+}
+
+@media (min-width: 1200px) {
+    .header {
+        width: 1050px;
+    }
+    .header p {
+        left: 525px;
+    }
+    .news,
+    .dictionary {
+        width: 1050px;
+    }
+    .dictionary-container {
+        width: 1050px;
+        margin-left: 200px;
+    }
 }
