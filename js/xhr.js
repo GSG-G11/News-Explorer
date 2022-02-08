@@ -12,7 +12,7 @@ function fetch(url, callbackOnSuccess, callbackOnFail) {
                     break;
             }
         }
-        xhr.open("GET", url, true);
-        xhr.send();
     };
+    xhr.open("GET", url, true);
+    xhr.send();
 }
