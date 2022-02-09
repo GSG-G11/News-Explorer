@@ -1,15 +1,14 @@
-function fetch(url, callbackOnSuccess, callbackOnFail) {
+function fetch(url, callbackOnSuccess, callbackOnFail, callbackOnServerError) {
     const xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
-            switch (xhr.status) {
-                case 200:
-                    let data = JSON.parse(xhr.responseText);
-                    callbackOnSuccess(data);
-                    break;
-                case 404:
-                    callbackOnFail();
-                    break;
+            if (xhr.status === 200) {
+                let data = JSON.parse(xhr.responseText);
+                callbackOnSuccess(data);
+            } else if (xhr.status === 404) {
+                callbackOnFail();
+            } else if (xhr.status <= 500) {
+                callbackOnServerError();
             }
         }
     };

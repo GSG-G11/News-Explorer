@@ -18,8 +18,8 @@
 
     <section class="news">
         <div class="search-bar">
-            <input class="search" type="search" id="search-news" placeholder="search for News" />
-            <i class="fas fa-search"></i>
+            <input class="search" type="search" id="search-news" placeholder="search for News" required/>
+            <i class="fas fa-search" id="search-news-icon"></i>
         </div>
         <h2>Top Trends News</h2>
         <div class="news-container"></div>
@@ -28,8 +28,8 @@
     <section class="dictionary">
         <h2>Dictionary</h2>
         <div class="search-bar">
-            <input class="search" type="search" id="search-dictionary" placeholder="search in dictionary" />
-            <i class="fas fa-search"></i>
+            <input class="search" type="search" id="search-dictionary" placeholder="search in dictionary" required/>
+            <i class="fas fa-search" id="search-dictionary-icon"></i>
         </div>
 
         <div class="dictionary-container">
@@ -39,14 +39,16 @@
             </div>
             <div class="inner-container">
                 <label for="audio" class="dict-label">Audio: </label>
-                <audio class="audio-controls" controls src=""></audio>
+                <audio id="audio" class="audio-controls" controls src=""></audio>
             </div>
             <div class="inner-container">
                 <label for="synonyms" class="dict-label">Synonyms: </label>
                 <p id="synonyms"></p>
             </div>
-            
-            <label class="dict-label" for="word">Examples: </label>
+            <div class="inner-container">
+                <label class="dict-label" for="example">Examples: </label>
+                <p id="example"></p>
+            </div>
         </div>
 
     </section>

@@ -88,6 +88,8 @@ input:focus {
     align-items: center;
 }
 
+.inner-container p {}
+
 .dict-label {
     margin-right: 15px;
     font-size: 25px;
