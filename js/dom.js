@@ -43,7 +43,7 @@ searchNewsIcon.addEventListener("click", () => {
 
                 const icon = document.createElement("i")
                 icon.className = "fas fa-map-marked-alt"
-                const puplisher = document.createElement("p");ّ
+                const puplisher = document.createElement("p");
                 puplisher.className = "news-puplisher"
                 card.appendChild(title);
                 card.appendChild(article);
