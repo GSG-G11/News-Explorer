@@ -1,22 +1,22 @@
 {
-  "name": "news-explorer",
-  "version": "1.0.0",
-  "description": "News and Dectionary website using APIs",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GSG-G11/News-Explorer.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/GSG-G11/News-Explorer/issues"
-  },
-  "homepage": "https://github.com/GSG-G11/News-Explorer#readme",
-  "devDependencies": {
-    "jest": "^27.5.1"
-  }
+    "name": "news-explorer",
+    "version": "1.0.0",
+    "description": "News and Dectionary website using APIs",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest --watchAll"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/GSG-G11/News-Explorer.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/GSG-G11/News-Explorer/issues"
+    },
+    "homepage": "https://github.com/GSG-G11/News-Explorer#readme",
+    "devDependencies": {
+        "jest": "^27.5.1"
+    }
 }

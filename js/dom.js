@@ -15,19 +15,21 @@ const newsContainer = document.querySelector(".news-container")
 const dictionaryContainer = document.querySelector(".dictionary-container");
 
 const wordUrl = (word) => `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
-const newsUrl = (report) => `https://api.codetabs.com/v1/proxy/?quest=https://newsapi.org/v2/everything?q=${report}&from=2022-01-09&sortBy=publishedAt&apiKey=d4316dafee0b473796d7807eeb993f65`;
+const newsUrl = (report) => `https://api.codetabs.com/v1/proxy/?quest=https://newsapi.org/v2/everything?q=${report}&from=2022-01-09&sortBy=publishedAt&apiKey=9c974a740f55477fb7c99c9f4376ad43`;
 
 const checkLength = (parent, yourLength) => {
-
     return parent.children.length === yourLength;
 }
 
 searchNewsIcon.addEventListener("click", () => {
     const subject = searchNewsInput.value;
+
     fetch(newsUrl(subject), (data) => {
+        console.log(data);
         const articles = data.articles.slice(0, 6);
-        if (checkLength(newsContainer, 6)) {
-            newsContainer.textContent = '';
+        console.log(articles)
+        console.log(newsContainer.children.length == 0)
+        if (newsContainer.children.length == 0) {
             articles.forEach((ele, index) => {
                 const card = document.createElement("div");
                 card.className = "news-card"
@@ -56,7 +58,9 @@ searchNewsIcon.addEventListener("click", () => {
                 image.setAttribute("src", data.articles[index].urlToImage);
                 puplisher.textContent = data.articles[index].author;
             })
-        } else if (checkLength(newsContainer, 0)) {
+        } else if (newsContainer.children.length <= 6) {
+            newsContainer.textContent = '';
+
             articles.forEach((ele, index) => {
                 const card = document.createElement("div");
                 card.className = "news-card"
@@ -91,7 +95,6 @@ searchNewsIcon.addEventListener("click", () => {
 
 searchDictionaryIcon.addEventListener("click", () => {
     const word = searchDictionaryInput.value;
-
     fetch(wordUrl(word), (data) => {
         const synonymsArr = data[0].meanings[0].definitions[0].synonyms;
 
