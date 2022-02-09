@@ -3,7 +3,7 @@
 
 # API mini project
 ---
-## :robot_face: launch [News Explorer](https://gsg-g11.github.io/News-Explorer/)
+##g launch [News Explorer](https://gsg-g11.github.io/News-Explorer/)
 
 ---
 
