@@ -113,9 +113,9 @@ input:focus {
 
 .news-card {
     position: relative;
-    height: 300px;
+    height: 350px;
     border: 1px solid;
-    width: 300px;
+    width: 400px;
     margin-bottom: 20px;
     padding: 10px;
     display: flex;
@@ -133,7 +133,7 @@ input:focus {
 
 .news-article {
     align-self: start;
-    width: 160px;
+    width: 200px;
 }
 
 .news-img {
@@ -141,14 +141,15 @@ input:focus {
     position: absolute;
     right: 15px;
     top: 100px;
-    width: 100px;
+    width: 150px;
+    height: 110px;
 }
 
 .fa-map-marked-alt,
 .news-puplisher {
     position: absolute;
-    bottom: 40px;
-    left: 50px;
+    bottom: 20px;
+    left: 20px;
 }
 
 .news-puplisher {
@@ -185,7 +186,7 @@ input:focus {
         width: 200px;
     }
     .news-title {
-        margin-bottom: 50px;
+        margin-bottom: 20px;
         width: 300px;
     }
 }
