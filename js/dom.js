@@ -15,15 +15,12 @@ const newsContainer = document.querySelector(".news-container")
 const dictionaryContainer = document.querySelector(".dictionary-container");
 
 const wordUrl = (word) => `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+const newsUrl = (report) => `https://api.codetabs.com/v1/proxy/?quest=https://newsapi.org/v2/everything?q=${report}&from=2022-01-09&sortBy=publishedAt&apiKey=d4316dafee0b473796d7807eeb993f65`;
 
 const checkLength = (parent, yourLength) => {
 
     return parent.children.length === yourLength;
 }
-
-const newsUrl = (report) => `https://newsapi.org/v2/everything?q=${report}&from=2022-01-09&sortBy=publishedAt&apiKey=d4316dafee0b473796d7807eeb993f65`;
-
-
 
 searchNewsIcon.addEventListener("click", () => {
     const subject = searchNewsInput.value;
