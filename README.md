@@ -1,12 +1,14 @@
+
+
+
 # API mini project
 ---
-:Rocket: launch 
-[News Explorer](https://gsg-g11.github.io/News-Explorer/)
+## :robot_face: launch [News Explorer](https://gsg-g11.github.io/News-Explorer/)
 
 ---
 
 ## :newspaper: News Explorer 
-News Explorer is an open source based on (GNews & Dictionary) APIs, where you can search for any thing and get news for it, and you can search in our dectionary for any word you want.
+[News Explorer](https://https://gsg-g11.github.io/News-Explorer/) is an open source based on (News & Dictionary) APIs, where you can search for any thing and get news for it, and you can search in our dectionary for any word you want.
 
 ##### :rocket: **The purpose of this repository it's for education and test.**
 
@@ -24,7 +26,7 @@ contain all the trends news nowadays, you can click on the link and scroll down 
 
 
 ---
-## :motorway: Work flow
+## :snowflake: Work flow
 
 ### Design
 
@@ -37,7 +39,8 @@ Here is the Figma Design Quick User interface describe our API News Explorer [Fi
 
 ### Work
 
-we use basics HTML and CSS, javascript and list of public APIs ([News API](https://https://gnews.io/) and [API Dictionary](https://https://dictionaryapi.dev/))
+we use basics HTML and CSS, javascript and list of public APIs ([News API](https://newsapi.org/)
+ and [API Dictionary](https://https://dictionaryapi.dev/))
 
 --- 
 ## :eyes: User story
@@ -47,6 +50,5 @@ we use basics HTML and CSS, javascript and list of public APIs ([News API](https
 ---
 
 ### :computer: News Explorer Team:
-* Mohammed Hamada
-* Ghada Attallah
-
+* [Mohammed Hamada](https://github.com/Mohammed-Hamada)
+* [Ghada Attallah](https://github.com/GhadaAttallah)
