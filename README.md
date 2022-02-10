@@ -43,7 +43,7 @@ we use basics HTML and CSS, javascript and list of public APIs ([News API](https
  and [API Dictionary](https://dictionaryapi.dev/))
 
 --- 
-## :eyes: User story
+## :eyes: User journey
 * :white_check_mark: this website easy to use you just enter the page to choose the news you want to read more about by clicking on it, 
 * :white_check_mark: when you are reading you will face a difficult words so we put small dictionary to define and listen the spell of the word
 
