@@ -2,15 +2,12 @@ const getElement = (element) => document.getElementById(element);
 
 const searchNewsInput = getElement("search-news");
 const searchNewsIcon = getElement("search-news-icon");
-
 const searchDictionaryInput = getElement("search-dictionary");
 const searchDictionaryIcon = getElement("search-dictionary-icon");
-
 const myWord = getElement("word");
 const wordAudio = getElement("audio");
 const wordExamples = getElement("example");
 const wordSynonyms = getElement("synonyms");
-
 const newsContainer = document.querySelector(".news-container")
 const dictionaryContainer = document.querySelector(".dictionary-container");
 
@@ -21,74 +18,47 @@ const checkLength = (parent, yourLength) => {
     return parent.children.length === yourLength;
 }
 
+function createNewsCards(data) {
+    data.articles.slice(0, 6).forEach((ele, index) => {
+        const card = document.createElement("div");
+        card.className = "news-card"
+        const title = document.createElement("a");
+        title.className = "news-title"
+        const article = document.createElement("p");
+        article.className = "news-article"
+        const image = document.createElement("img");
+        image.className = "news-img"
+        const icon = document.createElement("i")
+        icon.className = "fas fa-map-marked-alt"
+        const puplisher = document.createElement("p");
+        puplisher.className = "news-puplisher"
+
+        card.appendChild(title);
+        card.appendChild(article);
+        card.appendChild(image);
+        card.appendChild(icon);
+        card.appendChild(puplisher);
+        newsContainer.appendChild(card)
+
+        title.textContent = data.articles[index].title;
+        title.setAttribute("target", "_blank")
+        title.setAttribute("href", data.articles[index].url)
+        article.textContent = data.articles[index].content;
+        image.setAttribute("src", data.articles[index].urlToImage);
+        puplisher.textContent = data.articles[index].author;
+    })
+}
+
 searchNewsIcon.addEventListener("click", () => {
     const subject = searchNewsInput.value;
 
     fetch(newsUrl(subject), (data) => {
         console.log(data);
-        const articles = data.articles.slice(0, 6);
-        console.log(articles)
-        console.log(newsContainer.children.length == 0)
         if (newsContainer.children.length == 0) {
-            articles.forEach((ele, index) => {
-                const card = document.createElement("div");
-                card.className = "news-card"
-                const title = document.createElement("a");
-                title.className = "news-title"
-                const article = document.createElement("p");
-                article.className = "news-article"
-                const image = document.createElement("img");
-                image.className = "news-img"
-
-                const icon = document.createElement("i")
-                icon.className = "fas fa-map-marked-alt"
-                const puplisher = document.createElement("p");
-                puplisher.className = "news-puplisher"
-                card.appendChild(title);
-                card.appendChild(article);
-                card.appendChild(image);
-                card.appendChild(icon);
-                card.appendChild(puplisher);
-                newsContainer.appendChild(card)
-
-                title.textContent = data.articles[index].title;
-                title.setAttribute("target", "_blank")
-                title.setAttribute("href", data.articles[index].url)
-                article.textContent = data.articles[index].content;
-                image.setAttribute("src", data.articles[index].urlToImage);
-                puplisher.textContent = data.articles[index].author;
-            })
+            createNewsCards(data)
         } else if (newsContainer.children.length <= 6) {
             newsContainer.textContent = '';
-
-            articles.forEach((ele, index) => {
-                const card = document.createElement("div");
-                card.className = "news-card"
-                const title = document.createElement("a");
-                title.className = "news-title"
-                const article = document.createElement("p");
-                article.className = "news-article"
-                const image = document.createElement("img");
-                image.className = "news-img"
-
-                const icon = document.createElement("i")
-                icon.className = "fas fa-map-marked-alt"
-                const puplisher = document.createElement("p");
-                puplisher.className = "news-puplisher"
-                card.appendChild(title);
-                card.appendChild(article);
-                card.appendChild(image);
-                card.appendChild(icon);
-                card.appendChild(puplisher);
-                newsContainer.appendChild(card)
-
-                title.textContent = data.articles[index].title;
-                title.setAttribute("target", "_blank")
-                title.setAttribute("href", data.articles[index].url)
-                article.textContent = data.articles[index].content;
-                image.setAttribute("src", data.articles[index].urlToImage);
-                puplisher.textContent = data.articles[index].author;
-            })
+            createNewsCards(data)
         }
     })
 })
