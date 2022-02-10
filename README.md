@@ -40,7 +40,7 @@ Here is the Figma Design Quick User interface describe our API News Explorer [Fi
 ### Work
 
 we use basics HTML and CSS, javascript and list of public APIs ([News API](https://newsapi.org/)
- and [API Dictionary](https://https://dictionaryapi.dev/))
+ and [API Dictionary](https://dictionaryapi.dev/))
 
 --- 
 ## :eyes: User story
