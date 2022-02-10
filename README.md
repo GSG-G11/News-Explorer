@@ -3,7 +3,7 @@
 
 # API mini project
 ---
-##g launch [News Explorer](https://gsg-g11.github.io/News-Explorer/)
+### 🤖 launch [News Explorer](https://gsg-g11.github.io/News-Explorer/)
 
 ---
 
