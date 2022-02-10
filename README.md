@@ -8,7 +8,7 @@
 ---
 
 ## :newspaper: News Explorer 
-[News Explorer](https://https://gsg-g11.github.io/News-Explorer/) is an open source based on (News & Dictionary) APIs, where you can search for any thing and get news for it, and you can search in our dectionary for any word you want.
+[News Explorer](https://gsg-g11.github.io/News-Explorer/) is an open source based on (News & Dictionary) APIs, where you can search for any thing and get news for it, and you can search in our dectionary for any word you want.
 
 ##### :rocket: **The purpose of this repository it's for education and test.**
 
